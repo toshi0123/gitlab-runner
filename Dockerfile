@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk upgrade --no-cache && apk add --no-cache docker xz
+RUN apk upgrade --no-cache && apk add --no-cache docker git xz
 
 ADD https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64 /usr/bin/gitlab-runner
 RUN chmod +x /usr/bin/gitlab-runner && \
